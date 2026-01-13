@@ -17,6 +17,8 @@ contract CounterTest is Test {
         assertEq(counter.number(), 1);
     }
 
+// [PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 28144, ~: 30477)
+// 运行256次，每次平均耗时28144 gas，中位数耗时30477 gas
     function testFuzz_SetNumber(uint256 x) public {
         counter.setNumber(x);
         assertEq(counter.number(), x);
