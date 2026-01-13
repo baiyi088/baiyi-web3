@@ -11,4 +11,8 @@ contract Counter {
     function increment() public {
         number++;
     }
+
+    function name() returns (string memory) {
+        return "Counter";
+    }
 }
