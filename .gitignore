@@ -1,4 +1,7 @@
 /baiyi-contract/lib
 /baiyi-contract/out
 */.idea
+*/*.idea
+.idea
+
 
