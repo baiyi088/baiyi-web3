@@ -7,13 +7,13 @@ fs_permissions = [{ access = "write", path = "./deployments" }]
 
 
 [rpc_endpoints]
-sepolia = "${SEPOLIA_RPC_URL}"
+sepolia = "https://ethereum-sepolia.rpc.subquery.network/public"
 polygon = "${POLYGON_RPC_URL}"
 local = "http://127.0.0.1:8545"
 optimism = "${OPTIMISM_RPC_URL}"
 
 
 [etherscan]
-sepolia = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "U94W3GDIUPXIRQ82HJMGVM7QJMH9ZTG6IG", chain = 11155111, url = "https://api.etherscan.io/api" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

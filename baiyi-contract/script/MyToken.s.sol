@@ -9,10 +9,13 @@ import {MyToken} from "../src/MyToken.sol";
 contract MyTokenScript is BaseScript {
     MyToken public myToken;
 
-    function run() public broadcaster {
+    function run() public {
+        vm.startBroadcast();
+
         myToken = new MyToken("MyToken", "MTK");
         console.log("MyToken deployed on %s", address(myToken));
-
         saveContract("MyToken", address(myToken));
+
+        vm.stopBroadcast();
     }
 }
