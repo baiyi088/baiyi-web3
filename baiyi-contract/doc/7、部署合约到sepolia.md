@@ -1,4 +1,4 @@
-## 合约部署
+## 合约部署的系列操作
 1、准备metamask钱包。
 领水
 
@@ -26,48 +26,15 @@
      - Alchemy、QuickNode 等平台的水龙头
    - 一般输入你的钱包地址，领 0.1~1 ETH 就够部署大多数合约了
 
-### 部署步骤（使用 Remix，最推荐新手）
-
-1. 打开 Remix IDE  
-   https://remix.ethereum.org
-
-2. 编写或粘贴你的 Solidity 合约
-   - 在左侧 File Explorer 创建新文件，例如 `MyContract.sol`
-   - 写好合约代码（记得 pragma solidity ^0.8.x;）
-
-3. 编译合约
-   - 左侧 → Solidity Compiler 面板
-   - 选择正确的 Compiler 版本（要和 pragma 匹配）
-   - 点击 Compile 按钮（看到绿色对勾就成功）
-
-4. 部署到 Sepolia
-   - 切换到左侧 → Deploy & Run Transactions 面板
-   - Environment 下拉菜单选择：**Injected Provider - MetaMask**（或 WalletConnect）
-   - MetaMask 会弹出连接确认 → 连接你的账户
-   - 确认 MetaMask 当前网络是 **Sepolia**
-   - 在 Contract 下拉选你刚编译好的合约
-   - 如果有构造函数参数，就在下面填入
-   - 点击橙色的 **Deploy** 按钮
-   - MetaMask 会弹出交易确认窗口 → 检查 gas 费 → 确认
-
-5. 等待交易上链（通常几秒到几十秒）
-   - 部署成功后，Remix 下面会显示合约地址（绿色）
-   - 复制这个地址
-
-6. 在 Sepolia Etherscan 上查看 & 验证（非常推荐）
-   - 打开 https://sepolia.etherscan.io/address/你的合约地址
-   - 点 "Contract" → "Code" 标签 → "Verify and Publish"
-   - 选择 “Solidity (Single file)” 或 “Multi-Part files”
-   - 粘贴你的源代码
-   - 选择正确的 Compiler 版本
-   - 填入构造函数参数（如果有）
-   - 点 Verify → 成功后合约源代码就公开了，其他人也能读懂
-
+## 部署合约
 
 一、部署和开源一块
 forge script .\script\MyToken.s.sol --keystore .\.keystores\main-wallet --rpc-url sepolia --broadcast --verify --etherscan-api-key YOUR_API_KEY_HERE.
 
-部署成功后的结果：0x5d52c679E63C9422A7059201a08A62466F575d83
+部署成功后的结果：
+
+https://sepolia.etherscan.io/address/0x4cb92cee3d86a11323d5eab68259d41dcb19fde8
+
 
 
 二、先部署后期开源
