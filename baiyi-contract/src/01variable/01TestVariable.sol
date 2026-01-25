@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+// https://github.com/OpenSpace100/blockchain-tasks/tree/main/solidity_sample_code
+
 // 变量的定义
 contract TestVariable {
     //1. 状态变量 格式：变量类型 [可见性] [可变状态] 变量名 [赋值];

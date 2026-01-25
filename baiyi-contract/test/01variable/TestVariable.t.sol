@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Test} from "forge-std/Test.sol";
-import {TestVariableInt} from "../../src/base/TestVariableInt.sol";
+import {TestVariableInt} from "../../src/01variable/03TestVariableInt.sol";
 
 contract TestVariableIntTest is Test {
     TestVariableInt public test_Increment;
