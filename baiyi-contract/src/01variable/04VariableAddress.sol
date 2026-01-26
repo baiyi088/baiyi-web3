@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 // 地址类型。
+// Solidity 使用地址类型来表示一个账号，地址类型有两种形式
 contract VariableAddress {
     // address：一个20字节的值
     address public owner;

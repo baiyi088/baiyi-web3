@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-// https://github.com/OpenSpace100/blockchain-tasks/tree/main/solidity_sample_code
+// demo: https://github.com/OpenSpace100/blockchain-tasks/tree/main/solidity_sample_code
 
 // 变量的定义
 contract TestVariable {

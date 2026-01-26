@@ -17,15 +17,13 @@ contract Bank {
 
     function deposit() public payable {
         balances[msg.sender] += msg.value;
-        if (top3.length == 0) {
+        if (top3.length < 3) {
             top3.push(msg.sender);
         } else {
             for (uint256 i = 0; i < top3.length; i++) {
                 if (balances[msg.sender] > balances[top3[i]]) {
                     // top3.insert(i, msg.sender);
-                    if (top3.length > 3) {
-                        top3.pop();
-                    }
+                    top3[i] = msg.sender;
                     break;
                 }
             }
@@ -37,4 +35,9 @@ contract Bank {
         uint256 amount = address(this).balance;
         payable(admin).transfer(amount);
     }
+
+    function receive payable external(){}
+
+    function fallback external(){}
 }
+

@@ -7,6 +7,7 @@ contract callee {
     }
 }
 
+// 可以指定发送的 value 和 gas ： {value: 10, gas: 10000} ， 但不建议指定 gas
 contract TestCallFunc {
     uint public counter;
 
