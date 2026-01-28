@@ -9,21 +9,29 @@ import {Bank} from "./01Bank_V1.sol";
 // 练习题
 // https://decert.me/quests/063c14be-d3e6-41e0-a243-54e35b1dde58
 contract BigBank is Bank {
-
-    constructor(address _admin){
+    constructor(address _admin) {
         admin = _admin;
     }
 
-    modifier onlyDeposit(uint256 _amount) {
-        require(_amount > 0.01 ether, "No balance");
+    modifier minimumDeposit(uint256 _amount) {
+        require(
+            _amount > 0.001 ether,
+            "Deposit amount must be greater than 0.001 ETH"
+        );
         _;
     }
 
-    function deposit() public payable override onlyDeposit(msg.value) {
+    function deposit() public payable override minimumDeposit(msg.value) {
         super.deposit();
     }
 
     function withdraw() public override {
         super.withdraw();
+    }
+
+    function setAdmin(address _admin) external {
+        require(admin == address(0), "Admin already set");
+        require(msg.sender == admin, "Only test can set admin");
+        admin = _admin;
     }
 }
