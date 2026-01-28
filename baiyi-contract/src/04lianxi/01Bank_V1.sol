@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
 // 编写一个 Bank 合约（代码提交到github）：
 // • 通过 Metamask 向Bank合约存款（转账ETH）
 // • 在Bank合约记录每个地址存款金额
@@ -15,7 +18,7 @@ contract Bank {
         admin = msg.sender;
     }
 
-    function deposit() public payable {
+    function deposit() public payable virtual{
         balances[msg.sender] += msg.value;
         if (top3.length < 3) {
             top3.push(msg.sender);
@@ -30,14 +33,20 @@ contract Bank {
         }
     }
 
-    function withdraw() public {
+    function withdraw() public virtual{
         require(msg.sender == admin, "Only admin can withdraw");
         uint256 amount = address(this).balance;
+        // 合约账户向管理员账户转账所有的 ETH
         payable(admin).transfer(amount);
     }
 
-    function receive payable external(){}
+    function receive() payable external{
+        // 接受 ETH 转账
+        // todo
+    }
 
-    function fallback external(){}
+    function fallback() external{
+        // todo
+    }
 }
 
