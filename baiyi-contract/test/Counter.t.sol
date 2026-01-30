@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+// 导入Test合约: 提供了基本的日志和断言功能
 import {Test} from "forge-std/Test.sol";
 import {Counter} from "../src/Counter.sol";
 
