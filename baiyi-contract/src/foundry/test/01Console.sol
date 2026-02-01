@@ -1,4 +1,6 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.25;
+
 import "forge-std/console.sol";
 
 // Console.log 最多支持 4 个参数、4 个类型：uint、string、bool、address
