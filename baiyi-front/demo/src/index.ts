@@ -18,8 +18,8 @@ import ERC20_ABI from './abis/MyERC20.json' with { type: 'json' };
 import { privateKeyToAccount } from "viem/accounts";
 dotenv.config();
 
-const COUNTER_ADDRESS = "0x610178dA211FEF7D417bC0e6FeD39F05609AD788";
-const ERC20_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const COUNTER_ADDRESS = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
+const ERC20_ADDRESS = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707";
 
 const main = async () => {
   // 创建一个公共客户端

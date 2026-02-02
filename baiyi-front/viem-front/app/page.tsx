@@ -6,7 +6,7 @@ import { foundry } from 'viem/chains';
 import Counter_ABI from './contracts/Counter.json';
 
 // Counter 合约地址
-const COUNTER_ADDRESS = "0x7148E9A2d539A99a66f1bd591E4E20cA35a08eD5";
+const COUNTER_ADDRESS = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
 
 export default function Home() {
   const [balance, setBalance] = useState<string>('0');
